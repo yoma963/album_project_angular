@@ -1,0 +1,14 @@
+<p>album-list works!</p>
+
+<a [routerLink]="['/']">
+    back to the homepage
+</a>
+
+<div *ngFor="let album of albums">
+    <h3>#{{ album.id }}</h3>
+
+    <a [routerLink]="['/albums', album.id]">
+        {{ album.title }}
+    </a>
+    <hr>
+</div>
